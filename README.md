@@ -1,2 +1,4 @@
 # challenge-card-game-becode
-Challenge: OOP in python with a card game
+_Challenge: OOP in python with a card game_
+
+
