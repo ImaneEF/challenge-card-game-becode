@@ -12,8 +12,7 @@ class Player():
         self.history = history
 
     def play(self):
-        random_card = random.choice(self.cards)
-        print(random_card)
+        self.cards.append(card)
 
 
 class Deck():
