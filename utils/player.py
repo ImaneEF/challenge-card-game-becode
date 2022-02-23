@@ -11,19 +11,39 @@ class Player():
         self.number_of_cards = 0
         self.history = history
 
-    def play():
+    def play(self):
         random_card = random.choice(self.cards)
         print(random_card)
 
 
 class Deck():
-    def __init__(self, cards: List[Card]):
-        for i in range (0, len(self)):
-            for j in range (0, len(suits)):
-                card = (faces[i] + suits[j])
-                deck.append(card)
-        print(deck)
+    def __init__(self):
+        self.cards = []
+        self.fill_deck()
 
+    def fill_deck(self):
+        for s in ["♠", "♥", "♦", "♣"]:
+            for v in range (len(["A", "2", "3", "4", "5", "6", "7", "8", "9", "10", "J", "Q", "K"])):
+                self.cards.append(Card(s, v))
+    
+    def show(self):
+        for c in self.cards:
+            c.__str__()
+
+    def shuffle(self):
+        for i in range(len(self.cards)-1, 0, -1):
+            r = random.randint(0,i)
+            self.cards[i], self.cards[r] = self.cards[r], self.cards[i]
+
+    def distribute(self):
+        return self.cards.pop()
+
+
+deck = Deck()
+deck.shuffle()
+#deck.show()
+card = deck.distribute()
+card.__str__()
 
 
 

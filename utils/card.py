@@ -5,24 +5,24 @@ value = ["A", "2", "3", "4", "5", "6", "7", "8", "9", "10", "J", "Q", "K"]
 icon = ["♠", "♥", "♦", "♣" ]
 
 class Symbol():
-    def __init__(self, color: str, icon):
-        self.color = color
+    def __init__(self, icon):
+        #self.color = color
         self.icon = icon
     
 
 class Card(Symbol):
-    def __init__(self, color, icon, value):
-        super().__init__(color, icon)
+    def __init__(self, icon, value):
+        super().__init__(icon)
         self.value = value
         
 
     def __str__(self):
 
-        print(self.color, self.icon, self.value)
+        print("{} of {}". format(self.value, self.icon))
 
 
-card = Card("red", "♥", "A")
-card.__str__()
+
+
 
 
 
