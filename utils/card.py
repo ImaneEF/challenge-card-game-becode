@@ -16,13 +16,13 @@ class Card(Symbol):
         self.value = value
         
 
-    def print_card(self):
+    def __str__(self):
 
         print(self.color, self.icon, self.value)
 
 
 card = Card("red", "♥", "A")
-card.print_card()
+card.__str__()
 
 
 
